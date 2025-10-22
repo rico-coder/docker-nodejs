@@ -1,48 +1,36 @@
-# **Thema:** Erstellen einer ToDo-Applikation mit Markdown, Git, GitHub und Docker
+# **Aufgabe:** Erstellen einer ToDo-Applikation mit Markdown, Git, GitHub und Docker
 
 In dieser Abschlussaufgabe werden alle erlernten Fähigkeiten in den Bereichen **Markdown**, **Git**, **GitHub** und **Docker** kombiniert. Die Aufgabe besteht darin, eine ToDo-Applikation zu erstellen und diese in einem Docker-Container bereitzustellen.
 
-### **Aufgabenstellung:**
+### **Installation des Projekts**
 
-1. **GitHub-Fork erstellen:**
-   - Erstelle einen **Fork** des folgenden GitHub-Repositories: [docker-nodejs-sample](https://github.com/ICT-BLJ/docker-nodejs-sample).
-   - Clone deinen Fork lokal auf deinen Computer.
+**Klonen des Repositories**
+- Ich habe eine Fork des folgenden GitHub-Repositories erstellt:
+[docker-nodejs-sample](https://github.com/ICT-BLJ/docker-nodejs-sample). Dies habe ich gemacht indem ich oben rechts im Repo auf _Fork_ und _Create a new Fork_ gegangen bin. Wie es im Bild erichtlich ist: ![Anleitung für bessere Findung](images/fork.png)
+- Um es zu bearbeite habe ich es jetzt noch gecloned. Dies habe ich gemacht indem ich im VS Code Terminal `git clone https://github.com/rico-coder/docker-nodejs` eingegeben habe.
 
-2. **Erstellen einer README-Datei in Markdown:**
-   - Erstelle eine **README.md** Datei im Root-Verzeichnis des Projekts.
-   - Die README soll alle Schritte zur **Installation des Projekts** enthalten. Dazu gehören:
-     - Klonen des Repositories
-     - Installation der notwendigen Pakete
-     - Docker-Konfiguration und -Installation
-     - Starten der Applikation in einem Docker-Container
-   - Nutze [Markdown](https://www.markdownguide.org/cheat-sheet/) für die Struktur und Formatierung der Datei.
+### Docker-Konfiguration und -Installation
+1. Docker Desktop instalieren: [docker-desktop](https://www.docker.com/products/docker-desktop/)
+2. Docker for Visual Studio Code: [VS-Code docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)
+3. WSL 2 updaten und wenn nötig neu starten
+### Installation der notwendigen Pakete
+1. Den command `docker init` im Command terminal im docker-nodejs-sample directory eingeben.
+2. Fragen Beantworten:
 
-3. **Dokumentation der Vorgehensweise:**
-   - Verfasse eine vollständige **Dokumentation in Word**, in der die Arbeitsschritte beschrieben werden. Diese Schritte sind:
-     - Klonen des Repositories
-     - Einrichtung der Entwicklungsumgebung
-     - Erstellung der README.md
-     - Verwendung von Git (Commit, Push)
-     - Erstellung und Nutzung von Docker-Containern
-   - Verwende die während des Office-Kurses erarbeiteten Kenntnisse für das Erstellen dieses Dokuments.
+   What application platform does your project use?\
+   Node
 
-4. **Dockerize das Node.js-Projekt:**
-   - Verfolge die Anleitung unter [docs.docker.com](https://docs.docker.com/guides/language/nodejs/containerize/) ab dem Schritt **"Initialize Docker assets"**.
-   - Dein Ziel ist es, das Projekt in einem Docker-Container lauffähig zu machen, sodass am Ende eine **ToDo-Applikation** in einem Docker-Container bereitsteht.
+   What version of Node do you want to use?\
+   18.0.0
 
-5. **Git-Workflows:**
-   - Arbeite mit **Git**, um Änderungen regelmäßig zu committen und auf GitHub zu pushen.
-   - Verwende sinnvolle Commit-Nachrichten, um deinen Fortschritt zu dokumentieren.
-   - Stelle sicher, dass dein finaler Stand auf GitHub vorhanden ist.
+   Which package manager do you want to use?\
+   npm
 
-6. **Abgabe:**
-   - **Dokumentation:** Lade die erstellte Word-Dokumentation (inkl. Screenshots und Beschreibung der Schritte) in dein Repository hoch.
-   - **GitHub-Link:** Stelle den Link zu deinem GitHub-Repository bereit, das den finalen Stand des Projekts enthält.
+   What command do you want to use to start the app:\
+   node src/index. js
 
-### **Ziele der Aufgabe:**
-- Anwendung und Vertiefung von Git und GitHub.
-- Verfassen einer strukturierten Anleitung mit Markdown.
-- Containerisieren einer Node.js-Anwendung mit Docker.
-- Dokumentation des gesamten Prozesses in einem Word-Dokument.
-  
-Viel Erfolg bei der Umsetzung!
+   What port does your server listen on?\
+   3000
+
+### Starten der Applikation in einem Docker-Container
+Die Applikation kann mit dem Command gestartet werden: `docker compose up --build`
